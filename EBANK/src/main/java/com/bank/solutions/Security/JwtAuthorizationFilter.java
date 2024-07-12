@@ -29,7 +29,6 @@ public class JwtAuthorizationFilter extends OncePerRequestFilter {
                         .parseClaimsJws(jwt)
                         .getBody();
 
-                // Vous pouvez maintenant utiliser les claims pour obtenir des informations du JWT
                  String username = claims.getSubject();
          ;
                     UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(
